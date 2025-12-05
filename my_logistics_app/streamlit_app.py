@@ -26,7 +26,6 @@ st.markdown("""
 # ————————————————————————
 # Sidebar navigation
 # ————————————————————————
-st.sidebar.image("https://via.placeholder.com/150x50?text=VOLK+LOGO", use_column_width=True)
 st.sidebar.markdown("<h2 style='color:#8B1A1A;'>Dispatcher Skills</h2>", unsafe_allow_html=True)
 
 pages = {
@@ -47,7 +46,6 @@ page = pages[choice]
 # Page content
 # ————————————————————————
 if page == "home":
-    st.markdown("<h1 class='big-font'>Volk Transfer, Inc.</h1>", unsafe_allow_html=True)
     st.image("https://via.placeholder.com/800x400?text=Smart+Move+Logistics", use_column_width=True)
     st.markdown("""
     ### Welcome to the **Logistics Dispatcher Mastery Hub**  
@@ -89,8 +87,8 @@ elif page == "communication":
     template = st.selectbox("Choose template", 
                             ["Load Confirmation", "Rate Confirmation", "Check-Call Update"])
     body = {
-        "Load Confirmation": "Hi [Carrier], Load #VOLK123 is confirmed for pickup 11/08 at 08:00...",
-        "Rate Confirmation": "Thank you for accepting $2.15/mile on load #VOLK123...",
+        "Load Confirmation": "Hi [Carrier], Load #123 is confirmed for pickup 11/08 at 08:00...",
+        "Rate Confirmation": "Thank you for accepting $2.15/mile on load 123...",
         "Check-Call Update": "Driver called in at 14:30, currently 200 miles out..."
     }
     msg = st.text_area("Edit & send", body.get(template, ""), height=200)
@@ -110,7 +108,7 @@ elif page == "coordinate":
     st.header("🚚 Coordinate Movement of Freight")
     st.markdown("Real-time load board simulator.")
     loads = pd.DataFrame({
-        "Load ID": ["VOLK123", "VOLK456", "VOLK789"],
+        "Load ID": ["123", "456", "789"],
         "Origin": ["Chicago, IL", "Dallas, TX", "Atlanta, GA"],
         "Dest": ["LA, CA", "NYC, NY", "Miami, FL"],
         "Pickup": [datetime(2025, 11, 8, 8), datetime(2025, 11, 9, 14), datetime(2025, 11, 10, 10)],
@@ -158,7 +156,5 @@ elif page == "apply":
 st.markdown("---")
 st.markdown("""
 <div style='text-align:center;'>
-    <p>🚛 <b>Volk Transfer, Inc.</b> | Call Ben: <a href='tel:5073856178'>507-385-6178</a> | 
-    <a href='https://volktransfer.com/volk-careers'>volktransfer.com/volk-careers</a></p>
 </div>
 """, unsafe_allow_html=True)
