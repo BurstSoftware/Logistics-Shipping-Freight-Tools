@@ -7,7 +7,7 @@ from datetime import datetime
 # Page config & styling
 # ————————————————————————
 st.set_page_config(
-    page_title="Volk Transfer Logistics Mastery",
+    page_title="Transfer Logistics Tool",
     page_icon="🚛",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -51,7 +51,7 @@ if page == "home":
     st.image("https://via.placeholder.com/800x400?text=Smart+Move+Logistics", use_column_width=True)
     st.markdown("""
     ### Welcome to the **Logistics Dispatcher Mastery Hub**  
-    Master every skill Volk Transfer needs in 7 interactive modules.  
+    Master every skill Transfer needs in 7 interactive modules.  
     Click any page on the left to dive in!
     """)
 
